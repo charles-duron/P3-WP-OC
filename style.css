@@ -1,0 +1,311 @@
+:root {
+    --blue:             #0065FC;
+    --blue-light:       #DEEBFF;
+    --grey:             #D9D9D9;
+    --grey-light:       #F2F2F2;
+    --white:            #FFFFFF;
+    --background-color: #F0F2F6;
+    --base-font-family: 'Raleway', sans-serif;
+    --base-font-size:   16px;
+    --base-font-weight: 400;
+    --base-color:       #000000;
+    --radius:           20px;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+#root, #__next {
+    isolation: isolate;
+}
+
+html {
+    color: var(--base-color);
+    font-size: var(--base-font-size);
+    font-weight: var(--base-font-weight);
+    font-family: var(--base-font-family);
+}
+
+.blue-color {
+    color: var(--blue);
+}
+
+body {
+    max-width: 1400px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--base-color);
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+/** HEADER **/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__menu {
+    display: flex;
+}
+
+.header__link {
+    display: inline-block;
+    border-top: 2px solid var(--white);
+    line-height: 115px;
+    padding: 0 25px;
+}
+
+.header__link:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+/** FILTRES **/
+.filtres__title {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 8px;
+}
+
+.filtres__text {
+    line-height: 19px;
+    margin-bottom: 20px;
+}
+
+.filtres__search {
+    position: relative;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 50px;
+    margin-bottom: 31px;
+}
+
+.filtres__search:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 50px;
+    height: 49px;
+    border-radius: 15px 0 0 15px;
+    background-color: var(--grey-light);
+}
+
+.filtres__search:before {
+    content: url(icons/pin.svg);
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 49px;
+    border-radius: 15px 0 0 15px;
+    background-color: var(--grey-light);
+}
+
+.filtres__input {
+    padding: 0;;
+    border: none;
+    border-top: 1px solid var(--grey-light);
+    border-bottom: 1px solid var(--grey-light);
+    line-height: 47px;
+    padding-left: 16px;
+}
+
+.filtres__submit {
+    color: var(--white);
+    background-color: blue;
+    border: 1px solid var(--blue);
+    font-size: 18px;
+    line-height: 47px;
+    border-radius: 0 15px 15px 0;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+.filtres__subtitle {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.filtres__filtre {
+    display: inline-flex;
+    font-size: 17px;
+    line-height: 46px;
+    border-radius: 25px;
+    border: 2px solid var(--grey);
+    padding-right: 25px;
+    font-weight: 700;
+    margin-left: 30px;
+    cursor: pointer;
+    background-color: var(--white);
+    transition: all 0.2s;
+}
+
+.filtres__filtre:hover {
+    background-color: var(--blue-light);
+}
+
+.filtres__icon {
+    color: var(--blue);
+    display: flex;
+    width: 52px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filtres__info {
+    margin: 38px 0 39px;
+}
+
+.filtres__info span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--grey);
+    border-radius: 12px;
+    margin-right: 11px;
+}
+
+.filtres__info img {
+    height: 10px;
+}
+
+/** HEBERGEMENTS **/
+
+.hebergements,
+.populaires {
+    display: flex;
+    flex-direction: column;
+    padding: 42px 40px 46px;
+    background-color: var(--grey-light);
+    border-radius: var(--radius);
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    border: 5px solid var(--white);
+    overflow: hidden;
+}
+
+.card__img__container {
+    height: 114px;
+}
+
+.card__img__container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card__text__container {
+    padding: 9px 11px 6px;
+}
+
+.card__text__container h3,
+.card__text__container p {
+    line-height: 15px;
+    margin-bottom: 9px;
+}
+
+.card__rating {
+    display: flex;
+}
+
+.hebergements__populaires {
+    display: flex;
+}
+
+.hebergements {
+    flex-grow: 88;
+    --gap : 30px;
+}
+
+.hebergements__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.hebergements__container .card {
+    width: calc((100% - 2 * var(--gap)) / 3);
+}
+
+/** POPULAIRES **/
+
+.populaires {
+    flex-grow: 42;
+    margin-left: 40px;
+}
+
+/** FOOTER **/
+
+.footer {
+    background-color: var(--grey-light);
+    padding: 45px 70px 58px;
+}
+
+.footer__title {
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 8px;
+}
+
+.footer__nav {
+    display: flex;
+}
+
+.footer__column {
+    flex: 1;
+}
+
+.footer__link {
+    display: inline-block;
+    line-height: 19px;
+    margin-top: 12px;
+}
+
+.footer__link:hover, .footer__link:focus {
+    text-decoration: underline;
+}
