@@ -297,6 +297,16 @@ article {
     margin-left: 40px;
 }
 
+.populaires h2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+}
+
+.populaires h2:after {
+    content: url(icons/stonks.svg)
+}
+
 .populaires .card__text__container {
     min-height: 134px;
     flex-direction: column;
